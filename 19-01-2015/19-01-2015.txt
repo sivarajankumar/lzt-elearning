@@ -6,6 +6,4 @@
 	+entity
 	+DAOInterface
 	+DAOImplement
-	+Service
-
-- ...
+	+
