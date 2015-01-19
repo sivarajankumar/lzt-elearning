@@ -1,0 +1,11 @@
+- Eclip luna + spring tool
+- pom.xml use to download library.
+- web.xml use to config application
+  web.xml contains some configs to jpa
+- Jpa meaning?
+	+entity
+	+DAOInterface
+	+DAOImplement
+	+Service
+
+- ...
