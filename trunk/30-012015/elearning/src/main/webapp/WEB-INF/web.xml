@@ -28,8 +28,8 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	<!-- 5 minuste -->
+	<!-- 60 minustes -->
 	 <session-config>
-     	<session-timeout>5</session-timeout>
+     	<session-timeout>60</session-timeout>
    	</session-config>
 </web-app>

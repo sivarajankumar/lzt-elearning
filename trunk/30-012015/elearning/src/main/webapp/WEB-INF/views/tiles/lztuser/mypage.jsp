@@ -18,6 +18,7 @@
 		</c:forEach>
 	</ul>
 </div>
+<div id="dialogPlace"></div>
 <div class="template">
 	<div id="dialog" title="Basic dialog">
 		<form action="/sendMessage" id="message">

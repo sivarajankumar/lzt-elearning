@@ -14,7 +14,7 @@ import org.lztvn.entity.User;
 
 
 public class DemoUserImpl implements IUserDAO{
-	@PersistenceContext(type=PersistenceContextType.EXTENDED)
+	@PersistenceContext()
 	EntityManager em;
 	@Override
 	public List<User> findByLastName(String lastName) {
