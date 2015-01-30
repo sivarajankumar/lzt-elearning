@@ -14,12 +14,16 @@ function service(data){
 }
 /*sample message*/
 function addDevice(name, type, description) {
-    var DeviceAction = {
+    var Device = {
         action: "add",
         name: name,
         type: type,
         description: description
     };
-    socket.send(JSON.stringify(DeviceAction));
+    var objectToSend = {
+    		method:"test",
+    		obj:Device,
+    };
+    socket.send(JSON.stringify(objectToSend));
 }
 /**/

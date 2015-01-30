@@ -17,26 +17,38 @@ $.fn.serializeObject = function()
     });
     return o;
 };
+var dialog;
 $( document ).ready(function() {
 	$(".item-user").click(function(){
 		var id = $(this).data("id");
 		$("[name='toUser']").val(id);
-		var dialog = $( "#dialog" ).dialog();
-		$("#message").submit(function( event ) {
-			 event.preventDefault();
-			  $.ajax({
-			      type: "POST",
-			      contentType : 'application/json',
-			      dataType : 'json',
-			      url: "/elearning/sendMessage",
-			      processData: false,
-			      data: JSON.stringify($("#message").serializeObject()),
-			     // data: JSON.stringify({toUser:"1",message:"chanvai"}), // Note it is important
-			      success :function(result) {
-			       // do what ever you want with data
-			      }
-			  });
-		});
-	})
+		dialog = $( "#dialog" ).dialog({
+			appendTo: "#dialogPlace",
+			close: function( event, ui ) {
+				$(this).dialog('destroy');
+			},
+			autoOpen  : false,
+		}).dialog('open');
+	});
+	
+	$("#message").submit(function( event ) {
+		 event.preventDefault();
+		 if($("[name='message']").val()!=null && $("[name='message']").val()!=''){
+			 $(".display-message").append("<li>me:"+ $("[name='message']").val() +"</li>");
+		 }
+		
+		  $.ajax({
+		      type: "POST",
+		      contentType : 'application/json',
+		      dataType : 'json',
+		      url: "/elearning/sendMessage",
+		      processData: false,
+		      data: JSON.stringify($("#message").serializeObject()),
+		     // data: JSON.stringify({toUser:"1",message:"chanvai"}), // Note it is important
+		      success :function(result) {
+		       // do what ever you want with data
+		      }
+		  });
+	});
 
 });
