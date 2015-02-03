@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="myapp.basic" template="/WEB-INF/views/layouts/classic.jsp">
+		<put-attribute name="title" value="Tiles tutorial homepage" />
+		<put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/layouts/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+		<put-attribute name="friendList" value="/WEB-INF/views/layouts/friendList.jsp" />
+		<put-list-attribute name="javascripts">
+			<add-attribute value="/resources/lib/jquery/external/jquery/jquery.js" />
+			<add-attribute value="/resources/lib/jquery/jquery-ui.min.js" />
+			<add-attribute value="/resources/js/websocket.js" />
+			<add-attribute value="/resources/js/app.js" />
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets">
+			<add-attribute value="/resources/lib/jquery/jquery-ui.min.css" />
+			<add-attribute value="/resources/theme/strickly/css/style.css" />
+			<add-attribute value="http://fonts.googleapis.com/css?family=Open+Sans" />
+		</put-list-attribute>
+	</definition>
+	<definition name="myapp.homepage" extends="myapp.basic">
+		<put-attribute name="slider"
+			value="/WEB-INF/views/tiles/home/slider.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/tiles/home/strickly.jsp" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/theme/strickly/js/jquery-1.9.0.min.js" />
+			<add-attribute value="/resources/theme/strickly/js/jquery.nivo.slider.js" />
+			<add-attribute value="/resources/js/home.js" />
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/theme/strickly/css/slider.css" />
+			<add-attribute value="/resources/css/home/style.css" />
+		</put-list-attribute>
+
+	</definition>
+	<definition name="myapp.login" extends="myapp.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/views/tiles/user/login.jsp" />
+		<put-attribute name="slider" value="" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/home/style.css" />
+		</put-list-attribute>
+	</definition>
+	<definition name="myapp.mypage" extends="myapp.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/views/tiles/lztuser/mypage.jsp" />
+		<put-attribute name="slider" value="" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/home/style.css" />
+			<add-attribute value="/resources/css/lztuser/style.css" />
+		</put-list-attribute>
+	</definition>
+
+
+</tiles-definitions>
