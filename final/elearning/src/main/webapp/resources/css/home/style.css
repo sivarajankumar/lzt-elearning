@@ -1,0 +1,58 @@
+@CHARSET "ISO-8859-1";
+
+.friendList-bot{
+	position:fixed;
+	width: 100%;
+	bottom: 0px;
+	z-index: 9999999999999999999999;
+}
+.wrap-content{
+	position:relative;
+	height: 1px;
+	bottom: 0px;
+	width: 20%;
+	float: right;
+}
+.tab-friend{
+	float:right;
+	width:100%;
+	position:absolute;
+	bottom: 0px;
+}
+.message-wrap{
+	background-color:black;
+}
+.friend-status{
+	background-color: rgb(255, 252, 0);
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+.friend-status b{
+	float:right;
+	font-size: 20px;
+}
+.status-bar .wrap * {
+	padding: 5px;
+	float: right;
+	font-weight: bold;
+	color: rgb(255, 252, 0);
+}
+.friends li{
+	display:block;
+	text-align: left;
+	padding: 10px;
+	background-color: rgb(242, 242, 242);
+	cursor: pointer;
+}
+.friends li:hover{
+	background-color: rgb(221, 135, 135);
+}
+.hide-friend,.template,.none{
+	display:none;
+}
+.message{
+	height:200px;
+	border:1px solid grey;
+	background-color: grey;
+}
