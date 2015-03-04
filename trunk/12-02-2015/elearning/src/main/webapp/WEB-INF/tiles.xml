@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Back office -->
+	<definition name="Base" template="/WEB-INF/views/layout.jsp">
+		<put-list-attribute name="javascripts">
+			<add-attribute value="/resources/lib/jquery/external/jquery/jquery.js" />
+			<add-attribute value="/resources/lib/jquery/jquery-ui.min.js" />
+			<add-attribute value="/resources/lib/bootstrap/js/bootstrap.min.js" />
+			<add-attribute value="/resources/lib/webui-popover-master/src/jquery.webui-popover.js" />
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets">
+			<add-attribute value="/resources/lib/jquery/jquery-ui.min.css" />
+			<add-attribute value="/resources/lib/bootstrap/css/bootstrap.min.css" />
+			<add-attribute value="/resources/lib/bootstrap/css/bootstrap-theme.min.css" />
+			<add-attribute value="/resources/lib/webui-popover-master/src/jquery.webui-popover.css" />
+		</put-list-attribute>
+	</definition>
+	<definition name="common" extends="Base">
+		<put-attribute name="title" value="e-learning" />
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+		<put-list-attribute inherit="true" name="stylesheets">
+			<add-attribute value="/resources/css/default.css" />
+			<add-attribute value="/resources/css/style1.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="cate" extends="common">
+		<put-attribute name="title" value="Hello Spring MVC"/>
+		<put-attribute name="body" value="/WEB-INF/views/cate.jsp" />
+	</definition>
+
+	<definition name="categoris" extends="common">
+		<put-attribute name="title" value="Course Category Management" />
+		<put-attribute name="body" value="/WEB-INF/views/categoris.jsp" />
+	</definition>
+
+	<definition name="courses" extends="common">
+		<put-attribute name="title" value="Course Management" />
+		<put-attribute name="body" value="/WEB-INF/views/courses.jsp" />
+	</definition>
+
+	<definition name="users" extends="common">
+		<put-attribute name="title" value="Users Management" />
+		<put-attribute name="body" value="/WEB-INF/views/users.jsp" />
+	</definition>
+
+	<definition name="login" extends="common">
+		<put-attribute name="title" value="Authentication" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+
+	<definition name="contents" extends="common">
+		<put-attribute name="title" value="Contents" />
+		<put-attribute name="body" value="/WEB-INF/views/contents.jsp" />
+	</definition>
+
+
+	<definition name="addtest" extends="common">
+		<put-attribute name="title" value="Contents" />
+		<put-attribute name="body" value="/WEB-INF/views/addtest.jsp" />
+	</definition>
+
+
+	<!-- Back office -->
+
+
+	<!-- Front office -->
+
+	<definition name="common_front" template="/WEB-INF/views/front/layout.jsp" extends="Base">
+
+		<put-attribute name="title" value="e-learning" />
+		<put-attribute name="header_id" value="/WEB-INF/views/front/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="friendList" value="/WEB-INF/views/friendList.jsp" />
+		<put-attribute name="footer_id" value="/WEB-INF/views/front/footer.jsp" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<!--  <add-attribute value="/resources/js/jquery-1.9.0.min.js" /> -->
+			<add-attribute value="/resources/js/jquery.nivo.slider.js" />
+			<add-attribute value="/resources/js/websocket.js" />
+			<add-attribute value="/resources/js/app.js" />
+		</put-list-attribute>
+
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="http://fonts.googleapis.com/css?family=Open+Sans" />
+			<add-attribute value="/resources/css/front/style.css" />
+			<add-attribute value="/resources/css/front/slider.css" />
+			<add-attribute value="/resources/css/front/app.css" />
+		</put-list-attribute>
+
+	</definition>
+
+	<definition name="common_front_detail" extends="common_front"
+		template="/WEB-INF/views/front/layout_detail.jsp">
+		<put-attribute name="title" value="e-learning" />
+		<put-attribute name="body" value="" />
+
+	</definition>
+
+	<definition name="common_front_without_slider" extends="Base"
+		template="/WEB-INF/views/front/layout_detail.jsp">
+
+
+		<put-attribute name="friendList" value="/WEB-INF/views/friendList.jsp" />
+
+		<put-attribute name="title" value="e-learning" />
+
+
+		<put-attribute name="header_id" value="/WEB-INF/views/front/header.jsp" />
+
+
+		<put-attribute name="body" value="" />
+
+
+		<put-attribute name="footer_id" value="/WEB-INF/views/front/footer.jsp" />
+
+
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="http://fonts.googleapis.com/css?family=Open+Sans" />
+			<add-attribute value="/resources/css/front/style.css" />
+			<add-attribute value="/resources/css/front/app.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/js/websocket.js" />
+			<add-attribute value="/resources/js/app.js" />
+		</put-list-attribute>
+	</definition>
+
+
+	<definition name="lstcourses" extends="common_front">
+		<put-attribute name="title" value="Courses online" />
+		<put-attribute name="slider_id" value="/WEB-INF/views/front/slider.jsp" />
+		<put-attribute name="content-top_id"
+			value="/WEB-INF/views/front/content-top.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/lstcourses.jsp" />
+		<put-attribute name="content-bottom_id"
+			value="/WEB-INF/views/front/content-bottom.jsp" />
+	</definition>
+
+	<definition name="course" extends="common_front_detail">
+		<put-attribute name="title" value="Courses online detail" />
+		<put-attribute name="body" value="/WEB-INF/views/front/course.jsp" />
+	</definition>
+	
+	<definition name="test" extends="common_front_detail">
+		<put-attribute name="title" value="Test detail" />
+		<put-attribute name="body" value="/WEB-INF/views/front/test.jsp" />
+	</definition>
+
+	<definition name="flogin" extends="common_front_detail">
+		<put-attribute name="title" value="E-learning Authentication" />
+		<put-attribute name="body" value="/WEB-INF/views/front/login.jsp" />
+	</definition>
+
+	<definition name="about" extends="common_front_detail">
+		<put-attribute name="title" value="Introduction" />
+		<put-attribute name="body" value="/WEB-INF/views/front/about.jsp" />
+	</definition>
+
+	<definition name="welcome" extends="common_front_detail">
+		<put-attribute name="title" value="Login successful" />
+		<put-attribute name="body" value="/WEB-INF/views/front/welcome.jsp" />
+	</definition>
+
+	<definition name="register" extends="common_front_detail">
+		<put-attribute name="title" value="Registration" />
+		<put-attribute name="body" value="/WEB-INF/views/front/register.jsp" />
+	</definition>
+
+	<definition name="register_succes" extends="common_front_detail">
+		<put-attribute name="title" value="Registration successful" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/register_succes.jsp" />
+	</definition>
+
+	<definition name="allcourses" extends="common_front_detail">
+		<put-attribute name="title" value="all of courses" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/allcourses.jsp" />
+	</definition>
+
+	<definition name="courses_management" extends="common_front_without_slider">
+		<put-attribute name="title" value="Courses Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/courses_management.jsp" />
+	</definition>
+
+	<definition name="test_management" extends="common_front_without_slider">
+
+
+
+		<put-attribute name="title" value="Test Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/testmanagement.jsp" />
+
+
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/front/test.css" />
+
+
+
+
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts" inherit="true">
+
+		</put-list-attribute>
+	</definition>
+	<definition name="profile.pub" extends="common_front_detail">
+		<put-attribute name="header_id" value="/WEB-INF/views/front/header_profile.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/user/profile.jsp" />
+	</definition>
+	<definition name="profile.pri" extends="common_front_detail">
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/user/privateProfile.jsp" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/js/user/private_profile.js" />
+		</put-list-attribute>
+	</definition>
+	<definition name="profile.me" extends="common_front_detail">
+	<put-attribute name="header_id" value="/WEB-INF/views/front/header_profile.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/user/meProfile.jsp" />
+	</definition>
+	<definition name="contact" extends="common_front_without_slider">
+		<put-attribute name="title" value="Send us message" />
+		<put-attribute name="body" value="/WEB-INF/views/front/contact.jsp" />
+	</definition>
+
+	<definition name="message_success" extends="common_front_without_slider">
+		<put-attribute name="title" value="Your message is sent successfully" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/front/message_success.jsp" />
+	</definition>
+
+	<definition name="join_test" extends="common_front_without_slider">
+		<put-attribute name="title" value="all the tests" />
+		<put-attribute name="body" value="/WEB-INF/views/front/join_test.jsp" />
+	</definition>
+
+	<definition name="profile" extends="common_front_without_slider">
+		<put-attribute name="title" value="Your profile" />
+		<put-attribute name="body" value="/WEB-INF/views/front/profile.jsp" />
+	</definition>
+
+	<definition name="settings" extends="common_front_without_slider">
+		<put-attribute name="title" value="Your profile" />
+		<put-attribute name="body" value="/WEB-INF/views/front/settings.jsp" />
+	</definition>
+
+	<definition name="statistic" extends="common_front_without_slider">
+		<put-attribute name="title" value="Your profile" />
+		<put-attribute name="body" value="/WEB-INF/views/front/statistic.jsp" />
+	</definition>
+	<!-- Front office -->
+
+
+</tiles-definitions>  

@@ -1,0 +1,310 @@
+@CHARSET "ISO-8859-1";
+
+.friendList-bot {
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	z-index: 1000;
+}
+.webui-popover{
+	z-index: 1001;
+}
+
+.wrap-content {
+	position: relative;
+	height: 1px;
+	bottom: 0px;
+	width: 20%;
+	float: right;
+}
+
+.tab-friend {
+	float: right;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+}
+
+.message-wrap {
+	background-color: black;
+}
+
+.friend-status {
+	background-color: rgb(255, 252, 0);
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.friend-status b {
+	float: right;
+	font-size: 20px;
+}
+
+.status-bar .wrap * {
+	padding: 5px;
+	float: right;
+	font-weight: bold;
+	color: rgb(255, 252, 0);
+}
+
+.friends li {
+	display: block;
+	text-align: left;
+	padding: 10px;
+	background-color: rgb(242, 242, 242);
+	cursor: pointer;
+}
+
+.friends li:hover {
+	background-color: rgb(221, 135, 135);
+}
+
+.hide-friend, .template, .none {
+	display: none;
+}
+
+.message {
+	height: 200px;
+	border: 1px solid grey;
+	background-color: grey;
+}
+
+.cover {
+	height: 250px;
+	position: relative;
+}
+
+.cover img {
+	width: auto;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.tooltip_fb {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+/*-------Social Style----------*/
+.fb_btn_add_friend, .register-fb, .login-fb {
+	float: right;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial,
+		sans-serif;
+	font-size: 14px;
+	background-color: #6bb933;
+	border-color: #60a62e #519f18 #409701;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+	line-height: 26px;
+	padding: 0 10px;
+	border: 1px solid;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	-webkit-box-sizing: content-box;
+	-webkit-font-smoothing: antialiased;
+	font-weight: bold;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.icon-add-friend {
+	width: 12px;
+	height: 12px;
+	background-position: -270px -156px;
+	background-image: url(/elearning/resources/images/social/facebook.png);
+	background-size: auto;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin-right: 4px;
+	margin-bottom: -2px;
+}
+
+.invite-friend h3 {
+	background: #f6f7f8;
+	border-bottom: 1px solid #e9eaed;
+	color: #4e5665;
+	font-weight: 700;
+	padding-left: 14px;
+	text-transform: uppercase;
+	font-size: 11px;
+	line-height: 38px;
+}
+
+.invite-friend span {
+	color: #000;
+	font-size: 14px;
+}
+
+.tooltip_fb .fb_btn_add_friend {
+	background-color: white;
+	color: black;
+}
+
+.tooltip_fb .icon-add-friend {
+	width: 12px;
+	height: 12px;
+	background-position: -257px -156px;
+}
+
+.suggest-fb {
+	width: 300px;
+	background: rgba(195, 183, 183, 0.85);
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 10px;
+	background: rgba(195, 183, 183, 0.85);
+}
+
+.suggest-fb h1 {
+	font-weight: bold;
+}
+
+.header-fix {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	background-color: #75BC2E;
+	z-index: 1000;
+}
+
+.logo-e {
+	background-color: white;
+	width: 28px;
+	height: 28px;
+	margin: 10px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 2px;
+	float: left;
+	max-width: 20%;
+}
+
+.header-fix .search_box {
+	margin-top: 10px;
+	width: 65%;
+}
+
+.search_box form input[type="text"] {
+	width: 85%;
+}
+
+.flag span {
+	float: right;
+	margin-top: 10px;
+}
+
+.header-fix .menu {
+	margin-top: 10px;
+	font-size: 24px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.option {
+	margin-top: 10px;
+	cursor: pointer;
+	top: 10px;
+	cursor: pointer;
+}
+
+.request-friend {
+	background-image: url(/elearning/resources/images/social/faceNotify.png);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: 0 -577px;
+	height: 27px;
+	margin: 0;
+	padding: 2px;
+	width: 27px;
+	top: 10px;
+	cursor: pointer;
+	position: relative;
+}
+
+.request-friend span:after, .messagenf span:after{
+	content: attr(data-content);
+	background-color: red;
+	color: white;
+	top: -2px;
+	right: -2px;
+	position: absolute;
+	display: block;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.messagenf {
+	top: 10px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: 0 -481px;
+	background-image: url(/elearning/resources/images/social/faceNotify.png);
+	height: 27px;
+	margin: 0;
+	padding: 2px;
+	width: 27px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.event {
+	top: 10px;
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: 0 -958px;
+	background-image: url(/elearning/resources/images/social/faceNotify.png);
+	height: 27px;
+	margin: 0;
+	padding: 2px;
+	width: 27px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.mypage {
+	height: 27px;
+	margin: 0;
+	padding: 2px;
+	width: 35px;
+	top: 13px;
+	cursor: pointer;
+}
+
+.mypage img {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	border: 1px solid;
+	border-radius: 5px;
+}
+.mask-as-parent{
+	width:100%;
+	height:100%;
+	position: absolute;
+}
+#friend-list .new ul li{
+	border-color: #e9eaed;
+border-style: solid;
+padding: 4px 8px;
+}
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
